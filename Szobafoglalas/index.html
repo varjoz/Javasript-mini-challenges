@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panzio - szobafoglalas</title>
+    <!-- <link rel="stylesheet" href="reset.css">  -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1></h1>
+    <div class="link">
+        <a href="https://infojegyzet.hu/webszerkesztes/javascript/panzio/">Feladatok elerhetosege</a>
+    </div>
+    
+    <div class="container">
+        <form action="get">
+        <h1>Panzio - szobafoglalas</h1>
+        <div id="vendegek_szama">Vendegek szama</div> 
+        <select name="select_vendegek_szama" id="select_vendegek_szama" onchange="rajz()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <div id="vendeg_felvetel"></div>
+
+        <div class="box_wrapper">
+            <div class="left_box">
+                <p>Erkezes datuma</p>
+                <p>tavozas datuma</p>
+            </div>
+            <div class="right_box">
+                <input type="date" name="erkezes_datuma" id="erkezes_datuma">
+                <input type="date" name="tavozas_datuma" id="tavozas_datuma">
+            </div>
+        </div>
+            
+        <div class="box_wrapper">
+            <div class="left_box">
+                Szoba tipusa:
+            </div>
+            <div class="right_box">
+                <div class="radio_box_wrapper">
+                    <input type="radio" id="1agy" name="agyak" value="9000">
+                    <label for="1agy">Egyagyas - 9000 Ft/ej</label>
+                </div>
+                <div class="radio_box_wrapper">
+                    <input type="radio" id="2agy" name="agyak" value="15000">
+                    <label for="2agy">Ketagyas - 15000 Ft/ej</label>  
+                </div>
+                <div class="radio_box_wrapper">
+                    <input type="radio" id="2agy+1" name="agyak" value="19000">
+                    <label for="2agy">Ketagyas 1 potaggyal - 19000 Ft/ej</label>  
+                </div>
+                <div class="radio_box_wrapper">
+                    <input type="radio" id="2agy+2" name="agyak" value="21000">
+                    <label for="2agy">Ketagyas 2 potaggyal - 21000 Ft/ej</label>  
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="box_wrapper">
+            <div class="left_box">
+                <p>Ellatas:</p>
+            </div>
+            <div class="right_box">
+                <div class="radio_box_wrapper">
+                    <input type="radio" id="reggeli" name="etkezes" value="900">
+                    <label for="reggeli">Reggeli - 900 Ft/nap/fo</label>  
+                </div>
+                <div class="radio_box_wrapper">
+                    <input type="radio" id="felpanzio" name="etkezes" value="2900">
+                    <label for="felpanzio">Felpanzio - 2900 Ft/nap/fo</label>  
+                </div>
+                <div class="radio_box_wrapper">
+                    <input type="radio" id="teljes_panzio" name="etkezes" value="4900">
+                    <label for="teljes_panzio">Teljes panzio - 4900 Ft/nap/fo</label>  
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="box_wrapper">
+            <div class="left_box">
+                <p>Furdo szolgaltatasok: </p>
+            </div>
+            <div class="right_box">
+                <div class="checkbox_wrapper">
+                    <input type="checkbox" id="belteri_medencek" name="furdo_szolgaltatas" value="800">
+                    <label for="belteri_medencek">Belteri medenecek - 800 Ft/nap/fo</label>  
+                </div>
+                <div class="checkbox_wrapper">
+                    <input type="checkbox" id="kulteri_medencek" name="furdo_szolgaltatas" value="800">
+                    <label for="kulteri_medencek">Kulteri medenecek - 800 Ft/nap/fo</label>  
+                </div>
+                <div class="checkbox_wrapper">
+                    <input type="checkbox" id="szauna_belepo" name="furdo_szolgaltatas" value="800">
+                    <label for="szauna_belepo">Szauna belepo - 800 Ft/nap/fo</label>  
+                </div>
+                <div class="checkbox_wrapper">
+                    <input type="checkbox" id="teljes_belepo" name="furdo_szolgaltatas" value="2000">
+                    <label for="teljes_belepo">Teljes_belepo - 2000 Ft/nap/fo</label>  
+                </div>
+            </div>
+        </div>
+
+        <div class="box_wrapper">
+            <div class="left_box">
+                <p>Egyeb kerdes, kivansag:</p>
+            </div>
+            <div class="right_box">
+                <textarea name="egyeb_kivansag" id="egyeb_kivansag" cols="40" rows="5"></textarea>
+            </div>
+        </div>
+
+        <button type="button">Koltsegkalkulacio</button>
+
+        </form>
+    </div>
+
+    <script src="Szobafoglalas.js"></script>    
+</body>
+</html>
+
+
+

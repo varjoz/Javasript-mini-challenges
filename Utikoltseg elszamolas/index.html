@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Útiköltség</title>
+    <link rel="stylesheet" href="reset.css"> 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Útiköltség elszámolása</h1>
+    <div class="link">
+        <a href="https://infojegyzet.hu/webszerkesztes/javascript/utikoltseg/">Feladatok elerhetosege</a>
+    </div>
+
+    
+  <div class="container">
+  <h2>Útiköltség elszámolás</h2>
+  <h3>Személyes adatok:</h3>
+<form id="form" method="get">
+
+  <table id="tablazat">
+    <tr>
+      <td>Név: </td>
+      <td><input type="text" name="nev" id="nev"></td>
+    </tr>
+    <tr>                            
+      <td>Lakcím: </td>
+      <td><input type="text" name="lakcim" id="lakcim"></td>
+      </tr>
+      <tr>
+        <td>Születési dátum: </td>
+        <td>
+          <input type="date" name="szul_datum" id="szul_datum" min="1923-01-01">
+        </td>
+      </tr>
+    </table>
+    <h3>Gépjármű és üzemanyagadatok</h3>
+    <table id="tablazat">
+      <tr>
+        <td>Gepjarmu gyartmanya, tipusa: </td>
+        <td><input type="text" name="gepjarmu_tipus" id="gepjarmu_tipus"></td>
+      </tr>
+      <tr>
+        <td>Uzemanyag fajtaja:</td>
+        <td>
+          <select id="uzemanyag_fajtaja" name="uzemanyag_fajtaja" onchange="uzemanyag()">
+            <option value="1">Benzin</option>
+            <option value="2">Dizel</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr id="benzin_norma">
+        <td>Fogyasztasi norma: </td>
+        <td>
+          <select name="benzin_norma">
+            <option value="7.6">1000 cm3-ig 7,6 l/100km</option>
+            <option value="8.6">1001-1500 cm3 között 8,6 l/100km</option>
+            <option value="9.5">1501-2000 cm3 között 9,5 l/100km</option>
+            <option value="11.4">2001-3000 cm3 között 11,4 l/100km</option>
+            <option value="13.3">3001 cm3 fölött 13,3 l/100km</option>
+          </select>
+        </td>
+      </tr>
+      <tr id="dizel_norma" class="hide">
+        <td>Fogyasztasi norma: </td>
+        <td>
+          <select name="dizel_norma">
+            <option value="5.7">1500 cm3-ig 5,7 l/100km</option>
+            <option value="6.7">1501-2000 cm3 között 6,7 l/100km</option>
+            <option value="7.6">2001-3000 cm3 között 7,6 l/100km</option>
+            <option value="9.5">3001 cm3 fölött 9,5 l/100km</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Utazas datuma:</td>
+        <td><input type="date" name="utazas_datuma" id="utazas_datuma"></td>
+      </tr>
+      <tr>
+        <td>Uzemanyag egysegara:</td>
+        <td><input type="number" name="uzemanyag_egysegar" id="uzemanyag_egysegar"> Ft/l</td>
+      </tr>
+    </table>
+    <div class="forras">
+      <Span>Forras: </Span><a href="https://nav.gov.hu/ugyfeliranytu/uzemanyag/">https://nav.gov.hu/ugyfeliranytu/uzemanyag/</a>
+    </div>
+    
+    <h3>A megtett ut adatai</h3>
+    <table id="tablazat">
+      <tr>
+        <td>Kiindulasi hely: </td>
+        <td><input type="text" name="kiindulasi_hely" id="kiindulasi_hely"></td>
+      </tr>
+      <tr>
+        <td>Uticel: </td>
+        <td><input type="text" name="uticel" id="uticel"></td>
+      </tr>
+      <tr>
+        <td>Tovabbi uticel: </td>
+        <td><input type="text" name="tovabbi_uticel" id="tovabbi_uticel"></td>
+    </tr>
+    <tr>
+      <td>Osszes megtett tavolsag Google Maps alapjan:</td>
+      <td><input type="number" name="megtett_kilometer" id="megtett_kilometer"> Km</td>
+    </tr>
+  </table>
+  <button  type="button" id="check_btn" onclick="kuldes()">Ellenorzes es szamitas</button>
+  
+  <table id="tablazat">
+    <tr>
+      <td>Utikoltseg: </td>
+      <td><span id="utikoltseg"></span> Ft</td>
+    </tr>
+    <tr>
+      <td>Amortizacio: </td>
+      <td><span id="amortizacio"></span> Ft</td>
+    </tr>
+    <tr>
+      <td>Osszes elszamolhato koltseg:</td>
+      <td class="bold"><span id="osszes_elszamolhato_koltseg"></span> Ft</td>
+    </tr>
+  </table>
+  <div class="print">
+    <div class="left_hidden_box">
+      <p>Alairasommal igazolom, hogy az adataim a valosagnak megfelelnek</p><br><br>
+      <p>...............................</p><div id="mai_datum" onload="mai_datum()"></div>
+    </div>
+    <div class="right_hidden_box">
+      <p>...............................</p>
+      <p>Alairas</p>
+    </div>
+  </div>
+  <button type="button" id="print_btn" onclick="window.print()">Nyomtatas</button>
+</form>
+  
+</div>
+
+<script src="Utikoltseg_elszamolas.js"></script>    
+</body>
+</html>

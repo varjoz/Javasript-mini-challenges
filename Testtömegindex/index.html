@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1></h1>
+    <div class="link">
+        <a href="https://infojegyzet.hu/webszerkesztes/javascript/testtomegindex/">Feladatok elerhetosege</a>
+    </div>
+    
+    <div class="container">
+        <h1>Testtömegindex</h1>
+        <table id="tablazat">
+            <tr>
+              <td>Testsúlyod: </td>
+              <td><input type="number" name="" id="testsuly" onkeyup="szamol()"> kg</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="range" id="csuszka1" name="" min="20" max="300" style="width: 80%;"></td>
+            </tr>
+            <tr>
+              <td>Magasságod: </td>
+              <td><input type="number" name="" id="magassag" onkeyup="szamol()"> cm</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="range" id="csuszka2" name="" min="20" max="300" style="width: 80%;"></td>
+            </tr>
+            <tr>
+            <tr>
+              <td>Testtömegindexed: </td>
+              <td><input type="number" name="" id="testtomegindex" onkeyup="szamol()"> kg/m<sup>2</sup></td>
+            </tr>
+            <tr id="sor" class="hide">
+                <td>Súlytöbbleted: </td>
+                <td><input type="number" name="" id="sulytobblet"> kg</td>
+            </tr> 
+          </table>
+    </div>
+
+
+    <script src="testtomegindex.js"></script>    
+</body>
+</html>
+
+
+
