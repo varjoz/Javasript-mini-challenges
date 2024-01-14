@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="reset.css"> 
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1></h1>
+    <div class="link">
+        <a href="https://infojegyzet.hu/webszerkesztes/javascript/szinkevero/">Feladatok elerhetosege</a>
+    </div>
+    
+    <div class="container">
+        <h1>RGB_szinkevero</h1>
+        <div>
+            <span>R</span>
+            <input type="range" name="r" id="r" min="0" max="255" onchange="update()">
+            <span id="rval"></span>
+        </div>
+        <div>
+            <span>G</span>
+            <input type="range" name="g" id="g" min="0" max="255" onchange="update()">
+            <span id="gval"></span>
+        </div>
+        <div>
+            <span>B</span>
+            <input type="range" name="b" id="b" min="0" max="255" onchange="update()">
+            <span id="bval"></span>
+        </div>
+        <div>
+            <span>Kikevert szin</span>
+            <input type="text" name="" id="rgb">
+        </div>
+      </div>
+
+
+    <script src="RGB_szinkevero.js"></script>    
+</body>
+</html>
+
+
+
