@@ -1,0 +1,54 @@
+h1 {
+font-size: 24px;
+background-color: rgb(82, 124, 252);
+text-align: center;
+}
+
+.link {
+font-size: 10px;
+text-align: center;
+background-color: rgb(234, 213, 25);
+}
+/* ********************** */
+
+.container {
+    background-color: cadetblue;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#edzesnaptar tr td {
+    background-color: #DDF;
+    color: #008;
+    box-shadow: 1px 1px 0px #008;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+th {
+    background-color: rgb(190, 190, 190);
+}
+
+#edzesnaptar tr.szombat td {
+    background-color: #DFD;
+    color: #060;
+    box-shadow: 1px 1px 0px #060;
+}
+#edzesnaptar tr.vasarnap td {
+    background-color: #FDD;
+    color: #800;
+    box-shadow: 1px 1px 0px #800;
+}

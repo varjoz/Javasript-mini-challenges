@@ -1,0 +1,24 @@
+h1 {
+  font-size: 24px;
+  background-color: rgb(82, 124, 252);
+  text-align: center;
+  margin: 0;
+}
+
+.link {
+  font-size: 10px;
+  text-align: center;
+  background-color: rgb(234, 213, 25);
+  }
+
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+#tablazat {
+  background-color: aquamarine;
+  text-align: center;
+}
+

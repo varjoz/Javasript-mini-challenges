@@ -1,0 +1,252 @@
+h1 {
+    font-size: 24px;
+    background-color: rgb(159, 244, 161);
+    text-align: center;
+}
+
+.link {
+    font-size: 10px;
+    text-align: center;
+    background-color: rgb(245, 248, 105);
+}
+
+/* 19. Lottószelvény */
+
+.lotto {
+    width: 200px;
+    height: 200px;
+    font-size: 12px;
+    background-color: rgb(156, 170, 170);
+    border: 1px solid red;
+    margin: auto;
+    text-align: center;
+}
+
+.lotto td {
+    border: 1px solid red;
+    margin: 1px;
+    padding: 5px;
+}
+
+/* 20. E havi naptár */
+.naptar {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.naptar-cella {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 30px;
+    background: #745986;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.szombat {
+    background: #3ac25e;
+}
+
+.vasarnap {
+    background: #c23a5c;
+}
+
+
+/* 22. A szürke ötven árnyalata */
+.graybox {
+    width: 8px;
+    height: 15px;
+    margin-top: 10px;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+/* 23. Zöldek */
+.greenbox {
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+/* 24. Orgonasíp-elrendezés */
+.whistle_container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+}
+.whistle {
+    display: inline-block;
+    width: 5px;
+    background-color: rgb(56, 56, 240);
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+/* 25. Növekvő és világosodó körök */
+.circles_container {
+    width: 100vv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.circles_container .circle {
+    width: 30px;
+    height: 30px;
+    border: 2px solid  gray;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+/* 26. Számjegyek képpel */
+.numbers_container {
+    width: 100vv;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    
+}
+
+/* 27. Számok képpel 1-től 31-ig */
+.numbers2_container {
+    padding: 20px 0 20px 0;
+}
+.numbers {
+    margin-left: 10px;
+    display: inline;    
+}
+
+/* 28. Céltábla */
+.target_container {
+    height: 100vh;
+    position: relative;
+}
+
+.target_container .kor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.target_container .celtabla_szam {
+    font-weight: bold;
+    position: absolute;
+}
+
+.target_container .felso {
+    top: 7px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.target_container .also {
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.target_container .bal {
+    top: 50%;
+    left: 7px;
+    transform: translate(-50%, -50%);
+}
+.target_container .jobb {
+    top: 50%;
+    right: 0px;
+    transform: translate(-50%, -50%);
+}
+
+.target_container .kozep {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.target_container .bg_feher {
+    background-color:white;
+    border: 1px solid rgb(50, 50, 50);
+}
+.target_container .bg_fekete {
+    background-color:black;
+    color: white;
+    border: 1px solid #fff;
+}
+
+/* 29. Óra számlap: */
+.clock_container {
+    height: 100vh;
+    position: relative;
+}
+
+.clock_container .nagykor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #f0db64;
+    border: 1px solid black;
+}
+
+.clock_container .kiskor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #e1cdd2;
+    border: 1px solid rgb(222, 54, 35);
+}
+
+.clock_container .szam {
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: rgb(222, 54, 35);
+}
+
+.clock_container .vilagospont {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: rgb(242, 162, 33);
+}
+
+.clock_container .sotetpont {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: rgb(222, 54, 35);
+}
+
+/* 30. Csigavonal: */
+.spiral_container {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.spiral_container .pont{
+    position:absolute; 
+    width:3px; 
+    height:3px; 
+    background-color:rgb(96,96,128); 
+    border-radius:50%;
+}
+
